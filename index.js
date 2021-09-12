@@ -5,7 +5,7 @@ let subscriptions = require("./subscriptions.js");
 let events = require("./events.js");
 let users = require("./users.js");
 let app = express(); // создаем объект приложения
-let port = 8443;
+let port = process.env.PORT || 8443;
 let favicon = require("serve-favicon");
 const path = require("path");
 
