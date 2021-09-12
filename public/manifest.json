@@ -1,0 +1,23 @@
+{
+  "short_name": "BookHotel",
+  "name": "Book Hotel",
+  "description": "Забронюйте номер у гостиниці заздалегідь",
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/img/logo-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/logo-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#274b69",
+  "background_color": "#274b69",
+  "gcm_sender_id": "208984707982"
+}

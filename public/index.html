@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- https://www.youtube.com/watch?v=RuYG3RjjhaU -->
+    <title>Hotel Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#242424">
+    <link rel="icon" href="/img/logo-48x48.ico">
+</head>
+
+<body>
+    <header id="main-header">
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <a href="/" class="active"><img src="img/logo-white-25px.png" title="BookHotel"/></a>
+          <!-- Navigation links (hidden by default) -->
+          <div id="myLinks">
+            <a href="/bookings">Мої бронювання</a>
+            <a href="/my-account">Мій акаунт</a>
+            <a href="/contacts">Контакти</a>
+            <a href="/login" id="leave">Вийти</a>
+          </div>
+          <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+    </header>
+    <div id="booking">
+        <div id="booking-form">
+            <form action="/bookings" method="get">
+                <div class="input-group">
+                    <label for="form--city">Місто:</label>
+                    <select name="form--city" value="Київ">
+                        <option>Київ</option>
+                        <option>Одеса</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="form--arrival-date">Дата приїзду:</label>
+                    <input type="date" id="form--arrival-date" name="form--arrival-date" value="2022-11-05">
+                </div>
+                <div class="input-group">
+                    <label for="form--arrival-time">Час приїзду:</label>
+                    <input type="time" id="form--arrival-time" name="form--arrival-time" value="10:00">
+                </div>
+                <div class="input-group">
+                    <label for="form--nights">Кількість ночей:</label>
+                    <input type="number" value="3" min="1" max="365" id="form--nights" name="form--nights">
+                </div>
+                <div class="input-group">
+                    <label for="form--guests">Гості:</label>
+                    <input type="number" value="2" min="1" max="10" id="form--guests" name="form--guests">
+                </div>
+                <div class="btn-group">
+                    <label for="btn"></label>
+                    <button type="submit" name="btn" id="btn">Перевірити доступність</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container" id="events-container">
+        <h1>Новини</h1>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 event-container calendar-link-container"></div>
+        </div>
+    </div>
+    <div id="about-us">
+        
+    </div>
+    <div id="map">
+        
+    </div>
+    <footer id="footer">
+    <div class="footer-wrapper">
+    <div class="footer-logo"><img src="img/logo-white-50px.png" title="Logo"/></div>
+    <div class="container" id="footer-container">
+    
+    </div>
+    </div>
+        
+    </footer>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+    
+    <script src="/js/reservations-store.js"></script>
+    <script src="/js/vendor/progressive-ui-kitt/progressive-ui-kitt.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        ProgressiveKITT.setStylesheet("/js/vendor/progressive-ui-kitt/themes/flat.css");
+        ProgressiveKITT.render();
+    </script>
+</body>
+
+</html>

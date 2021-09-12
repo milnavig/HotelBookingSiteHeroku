@@ -1,0 +1,453 @@
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav .active {
+  padding: 13px 16px;
+}
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #274b69;
+  color: white;
+}
+
+.active img {
+  padding-top: 0px;
+  margin: 0px;
+}
+
+/* Виджет заказа */
+#booking {
+    width: 100%;
+    display: flex;
+}
+
+#booking #booking-form {
+    width: 100%;
+    /*border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;*/
+    background-color: #BED7ED;
+    display: flex;
+    flex-direction: column;
+}
+
+#booking #booking-form form div {
+    margin-right: 20px;
+}
+
+
+
+/* */
+button#btn {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=number], input[type=date], input[type=time] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;  
+}
+#booking-label {
+    margin-left: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    #booking #booking-form form {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    #booking #booking-form form {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 900px) {
+    #booking #booking-form form {
+        display: block;
+    }
+    .input-group {
+        width: 100%;
+    }
+    #booking #booking-form form {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Плитки новостей */
+#events-container {
+    
+    color: #242424;
+    font-size: 14px;
+    font-weight: 300;
+}
+#events-container h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+.event-container .event-card {
+    background-color: #BED7ED;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.15);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.15);
+    margin: 25px 0;
+    padding: 10px 15px;
+}
+
+#big-block {
+    display: flex;
+}
+#event-block {
+    padding-left: 10px;
+}
+@media screen and (max-width: 450px) { 
+    #big-block {
+        display: block;
+    }
+    #event-block {
+        padding-left: 0px;
+    }
+}
+
+.event-card .event-date {
+    color: #c0392b;
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 6px;
+}
+.img-size {
+    width: 250px;
+    height: auto;
+}
+
+@media screen and (max-width: 450px) { 
+    .img-size {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.details {
+    background-color: #274b69;
+    padding: 8px;
+    color: white;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Плитки бронирований */
+div#reservations-events-container {
+    background-color: #a3915e;
+    color: #242424;
+    padding: 20px 0;
+}
+div.reservation-card {
+    background-color: #fff;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.15);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.15);
+    margin: 25px 0;
+    /*height: 152px;*/
+    border: 1px solid #fff;
+}
+
+@media screen and (max-width: 750px) {
+    
+}
+div#reservation-loading {
+    text-align: center;
+    padding-top: 35px;
+}
+
+@media screen and (min-width: 550px) {
+    img.reserved-hotel-image {
+        width: 150px;
+        height: 150px;
+        float: left;
+    }
+    div.reservation-details {
+        height: 107px;
+    }
+}
+@media screen and (max-width: 550px) {
+    img.reserved-hotel-image {
+        width: 100%;
+        height: auto;
+    }
+    div.reservation-details {
+        height: 117px;
+    }
+    .arrivalDate {
+        width: 150px;
+    }
+}
+
+div.reserved-hotel-details {
+    float: left;
+    margin: 15px 0 0 25px;
+}
+div.reserved-hotel-details strong {
+    font-size: 16px;
+}
+div.reserved-hotel-details p {
+    margin: 2px 0 0;
+    font-size: 12px;
+}
+div.reservation-price {
+    float: right;
+    margin: 30px 25px 0 0;
+    text-align: right;
+}
+div.reservation-price strong {
+    font-size: 22px;
+}
+div.reservation-price p {
+    margin: 0;
+}
+div.reservation-actions {
+    height: 23px;
+    font-weight: 600;
+}
+div.reservation-actions a {
+    margin-left: 25px;
+    text-decoration: underline;
+    font-size: 11px;
+}
+div.reservation-actions a.reservation-action--error {
+    text-decoration: none;
+    color: #f00;
+    cursor: not-allowed;
+}
+div.reservation-status {
+    float: right;
+    margin-right: 25px;
+}
+div.reservation-meta-data {
+    height: auto;
+    background-color: #cfcfcf;
+    font-size: 11px;
+}
+div.reservation-meta-data span {
+    line-height: 20px;
+}
+div.reservation-meta-data strong {
+    margin-left: 25px;
+}
+
+@-webkit-keyframes throbbing {
+    0%   { opacity: 1; }
+    70%  { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes throbbing {
+    0%   { opacity: 1; }
+    70%  { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+@-o-keyframes throbbing {
+    0%   { opacity: 1; }
+    70%  { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+@keyframes throbbing {
+    0%   { opacity: 1; }
+    70%  { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+div.reservation-card.reservation-card--unconfirmed {
+    -webkit-animation: throbbing 2000ms 300ms infinite ease-out;
+    -moz-animation:    throbbing 2000ms 300ms infinite ease-out;
+    -o-animation:      throbbing 2000ms 300ms infinite ease-out;
+    animation:         throbbing 2000ms 300ms infinite ease-out;
+}
+
+/* Footer */
+.footer-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #274b69;
+}
+
+#footer-container {
+    color: #fff;
+    padding-bottom: 50px;
+}
+#footer-container .col-md-3, #footer-container .col-md-4, #footer-container .col-md-5 {
+    padding-top: 30px;
+}
+#footer-container h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+#footer-container p {
+    margin-bottom: 4px;
+}
+#footer-container .contact-details-row {
+    margin: 0 0 4px 0;
+    border-bottom: 1px solid #3d3a30;
+}
+#footer-container .contact-details-row div {
+    padding: 0;
+}
+#footer-container .contact-details-row div:last-child {
+    text-align: right;
+}
+#footer-container .slogan-row {
+    margin-top: 49px;
+}
+#footer-container .slogan-row img {
+    width: 150px;
+}
+.footer-logo {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Предложение push-уведомлений */
+.bottom-modal {
+  position: fixed;
+  width: 100%;
+  background-color: #333;
+  border-top: 2px solid #BED7ED;
+  z-index: 1005;
+  padding: 20px 5px;
+  bottom: -1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition:    all 0.3s ease-in-out;
+  -o-transition:      all 0.3s ease-in-out;
+  -ms-transition:     all 0.3s ease-in-out;
+  transition:         all 0.3s ease-in-out;
+}
+
+.bottom-modal.modal--hide {
+  -webkit-transform:  translate(0, 200px);
+	-moz-transform:     translate(0, 200px);
+	-o-transform:       translate(0, 200px);
+	-ms-transform:      translate(0, 200px);
+  transform:          translate(0, 200px);
+}
+
+#offer-notification {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 900;
+}
+#offer-notification a {
+  color: #BED7ED;
+}
+#offer-notification a:hover {
+  color: #BED7ED;
+  text-decoration: none;
+}
+
+#offer-notification img {
+  width: 36px;
+  margin-right: 10px;
+  vertical-align: bottom!important;
+}
+
+/* Map */
+#mapdiv {
+    width: 100%;
+    height: 500px;
+}
+
+#info {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#mapdiv.map-offline {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/img/map.jpg');
+}
+
+#news {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+#div-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#news-photo {
+    justify-content: center;
+}
